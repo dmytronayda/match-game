@@ -11,9 +11,21 @@ var MatchGame = {};
 
 MatchGame.generateCardValues = function () {
   // Create a sequentially-ordered — in ascending order — array with two copies of every number from 1 through 8
-  var numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
+  var numbers = [];
   // Randomly transfer those values to a new array
-  for 
+  for (var num = 1; num < 9; num++)
+  {
+    numbers.push(num);
+    numbers.push(num);
+  }
+  var randNumbers = [];
+  var numbersLength = numbers.length;
+  while (numbersLength < 16) {
+    var randIndex = Math.floor(Math.random() * 16);
+    randNumbers.push([randIndex])
+  }
+
+
 
   // Return the randomly-ordered array
 };
